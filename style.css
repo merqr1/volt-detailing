@@ -1,0 +1,404 @@
+
+:root {
+    --bg: #10120f;
+    --panel: #191c17;
+    --green: #c5ff55;
+    --white: #f5f6f2;
+    --muted: #a4a99e;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 20px;
+}
+
+body {
+    background: var(--bg);
+    color: var(--white);
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+.navbar {
+    min-height: 78px;
+    padding: 20px 8%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    border-bottom: 1px solid #292d25;
+}
+
+.logo {
+    font-size: 26px;
+    font-weight: 900;
+    letter-spacing: 2px;
+}
+
+.logo span,
+.hero h1 span,
+.gallery h2 span {
+    color: var(--green);
+}
+
+nav {
+    display: flex;
+    gap: 28px;
+}
+
+nav a {
+    color: var(--muted);
+    font-size: 14px;
+    transition: color 0.2s;
+}
+
+nav a:hover {
+    color: var(--green);
+}
+
+.nav-button,
+.primary-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    padding: 12px 20px;
+    font-weight: 700;
+}
+
+.nav-button {
+    border: 1px solid #42483a;
+    border-radius: 4px;
+    transition: border-color 0.2s;
+}
+
+.nav-button:hover {
+    border-color: var(--green);
+}
+
+.hero {
+    min-height: 520px;
+    padding: 75px 8%;
+    display: grid;
+    grid-template-columns: 1fr 0.8fr;
+    align-items: center;
+    gap: 40px;
+}
+
+.eyebrow {
+    color: var(--green);
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 2px;
+}
+
+.hero h1 {
+    margin: 20px 0;
+    font-size: clamp(46px, 6vw, 76px);
+    line-height: 1.05;
+    letter-spacing: -3px;
+}
+
+.intro {
+    max-width: 420px;
+    margin-bottom: 26px;
+    color: var(--muted);
+}
+
+.primary-button {
+    background: var(--green);
+    color: #11140d;
+    border-radius: 3px;
+    transition: transform 0.2s, background 0.2s;
+}
+
+.primary-button:hover {
+    background: #d7ff8b;
+    transform: translateY(-2px);
+}
+
+.hero-note {
+    margin-top: 35px;
+    color: var(--muted);
+    font-size: 12px;
+}
+
+.status-dot {
+    display: inline-block;
+    width: 8px;
+    height: 8px;
+    margin-right: 8px;
+    border-radius: 50%;
+    background: var(--green);
+}
+
+.hero-visual {
+    position: relative;
+    min-height: 420px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    overflow: hidden;
+    border: 1px solid #414936;
+    border-radius: 12px;
+    background:
+        radial-gradient(ellipse at 70% 35%, #424d30 0%, transparent 50%),
+        linear-gradient(145deg, #252b20, #121510 70%);
+}
+
+.hero-image {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.visual-label {
+    position: relative;
+    z-index: 1;
+    padding: 24px;
+    color: var(--green);
+    font-size: 11px;
+    letter-spacing: 2px;
+}
+
+.visual-text {
+    position: relative;
+    z-index: 1;
+    padding: 180px 24px 24px;
+    color: white;
+    font-size: clamp(35px, 5vw, 58px);
+    font-weight: 900;
+    line-height: 1;
+    letter-spacing: -2px;
+    text-shadow: 0 2px 12px #000;
+}
+
+.services {
+    padding: 65px 8%;
+    background: #151713;
+}
+
+.services h2,
+.contact h2 {
+    margin: 10px 0 30px;
+    font-size: 36px;
+    line-height: 1.2;
+}
+
+.service-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 18px;
+}
+
+.service-card {
+    padding: 25px;
+    border: 1px solid #34382f;
+    border-radius: 5px;
+    background: var(--panel);
+    transition: transform 0.2s, border-color 0.2s;
+}
+
+.service-card:hover {
+    transform: translateY(-4px);
+    border-color: #69764c;
+}
+
+.service-card > span {
+    color: var(--green);
+    font-size: 11px;
+    letter-spacing: 1px;
+}
+
+.service-card h3 {
+    margin: 18px 0 8px;
+    font-size: 19px;
+}
+
+.service-card p,
+.contact > p:not(.eyebrow) {
+    color: var(--muted);
+    font-size: 14px;
+}
+
+.service-card strong {
+    display: block;
+    margin-top: 20px;
+    font-size: 24px;
+    color: var(--green);
+}
+
+.contact {
+    padding: 75px 8%;
+    text-align: center;
+}
+
+.contact .primary-button {
+    margin-top: 24px;
+}
+
+footer {
+    padding: 25px 8%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+    border-top: 1px solid #292d25;
+}
+
+footer p {
+    color: var(--muted);
+    font-size: 12px;
+}
+
+/* GALÉRIA */
+
+.gallery {
+    min-height: 70vh;
+    padding: 70px 8%;
+    background: var(--bg);
+}
+
+.gallery h2 {
+    margin: 10px 0;
+    font-size: clamp(30px, 4vw, 42px);
+    line-height: 1.2;
+}
+
+.gallery-intro {
+    margin-bottom: 30px;
+    color: var(--muted);
+}
+
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 20px;
+}
+
+.gallery-item {
+    overflow: hidden;
+    border: 1px solid #34382f;
+    border-radius: 8px;
+    background: var(--panel);
+}
+
+.gallery-item img {
+    display: block;
+    width: 100%;
+    height: 260px;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.gallery-item:hover img {
+    transform: scale(1.05);
+}
+
+.gallery-item figcaption {
+    padding: 16px;
+    color: var(--white);
+    font-weight: bold;
+}
+
+.back-button {
+    margin-top: 35px;
+}
+
+/* MOBILNÉ ZOBRAZENIE */
+
+@media (max-width: 700px) {
+    .navbar {
+        padding: 16px 5%;
+        flex-wrap: wrap;
+        gap: 14px;
+    }
+
+    .logo {
+        font-size: 23px;
+    }
+
+    nav {
+        gap: 14px;
+    }
+
+    nav a {
+        font-size: 13px;
+    }
+
+    .nav-button {
+        display: none;
+    }
+
+    .hero {
+        padding: 50px 6%;
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+
+    .hero h1 {
+        font-size: clamp(40px, 10vw, 58px);
+        letter-spacing: -2px;
+    }
+
+    .hero-visual {
+        min-height: 300px;
+    }
+
+    .visual-text {
+        padding-top: 100px;
+        font-size: 40px;
+    }
+
+    .services {
+        padding: 50px 6%;
+    }
+
+    .service-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .service-card {
+        padding: 22px;
+    }
+
+    .contact {
+        padding: 55px 6%;
+    }
+
+    .contact h2,
+    .services h2 {
+        font-size: 29px;
+    }
+
+    .gallery {
+        padding: 50px 6%;
+    }
+
+    .gallery-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .gallery-item img {
+        height: 230px;
+    }
+
+    footer {
+        padding: 22px 6%;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+}
